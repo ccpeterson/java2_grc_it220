@@ -20,6 +20,7 @@ public class PersonalContact extends Contact
 	//methods
 	public LocalDateTime getBirthDate()
 	{
+		
 		return birthDate;
 	}
 	
@@ -35,6 +36,6 @@ public class PersonalContact extends Contact
 	
 	public String toString()
 	{
-		return address;
+		return ("Personal Contact: " + super.toString() + ", " + birthDate.toLocalDate() + ", " + address); 
 	}
 }

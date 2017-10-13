@@ -39,6 +39,6 @@ public class BusinessContact extends Contact
 	
 	public String toString()
 	{
-		return company;
+		return ("Business Contact: " + super.toString() + ", " + company + " (" + position + "), " + phoneNumber);
 	}
 }

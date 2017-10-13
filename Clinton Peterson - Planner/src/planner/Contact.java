@@ -40,6 +40,19 @@ public class Contact
 	
 	public String toString()
 	{
-		return firstName;
+		String printGender;
+		if (gender == true)
+		{
+			printGender = "male";
+		}
+		else if (gender == false)
+		{
+			printGender = "female";
+		}
+		else
+		{
+			printGender = "unknown";
+		}
+		return (firstName + " " + lastName + " (" + email + "), " + printGender);
 	}
 }
