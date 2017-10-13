@@ -33,6 +33,11 @@ public class Contact
 		return gender;
 	}
 	
+	public void printContact()
+	{
+		System.out.println(this.toString());
+	}
+	
 	public String toString()
 	{
 		return firstName;
