@@ -2,17 +2,23 @@ package planner;
 
 import java.util.Scanner;
 import java.time.LocalDateTime;
+/**
+ * Project: Planner Assignment
+ * PlannerMain.java
+ * 10/13/17
+ * @author Clinton Peterson
+ */
 
 public class PlannerMain
-{	
+{		
 	//initializes a scanner for console input
 	private static Scanner console = new Scanner(System.in);
-	
+	//initializes an array of contacts
 	private static Contact[] contacts = new Contact[6];
 	
 	public static void main(String[] args)
 	{	
-		// wrote a method to keep the contact info in the main but down at the bottom
+		//generates contact array
 		fillContacts();
 		
 		//standard menu loop
@@ -41,9 +47,12 @@ public class PlannerMain
 				System.out.println("Please choose one of listed options");
 			}
 		}
-		console.close();
-	}	
+		console.close(); 
+	}
 	
+	/**
+	 * this puts the info in the contacts array
+	 */
 	private static void fillContacts()
 	{		 
 		contacts[0] = new PersonalContact
@@ -59,7 +68,10 @@ public class PlannerMain
 		contacts[5] = new BusinessContact
 				("Jerome", "Bradley", "bradleyj@yahoo.com", true, "Costco", "Software Developer", "555-666-7777");		
 	}
-
+	
+	/**
+	 * prints all of the contacts of via their classes printContacts method
+	 */
 	private static void printContacts() 
 	{
 		for (int i = 0; i < contacts.length; i++)
@@ -68,14 +80,19 @@ public class PlannerMain
 		}
 		System.out.println();//new line
 	}
-
+	
+	/**
+	 * prints out certain stats about the array
+	 */
 	private static void printStats()
 	{
+		//counters for the stats
 		int personalCount = 0;
 		int businessCount = 0;
 		int maleCount = 0;
 		int femaleCount = 0;
 		
+		//loops through the contact array
 		for (int i = 0; i < contacts.length; i++)
 		{
 			if (contacts[i].getClass().getSimpleName().contains("Personal"))
@@ -95,7 +112,7 @@ public class PlannerMain
 				femaleCount++;
 			} 
 		}		
-		
+		//prints out the stats
 		System.out.println("Number of contacts: " + contacts.length);
 		System.out.println("Number of personal contacts: " + personalCount);
 		System.out.println("Number of business contatcs: " + businessCount);
@@ -103,7 +120,10 @@ public class PlannerMain
 		System.out.println("Number of female contacts: " + femaleCount);
 		System.out.println();//new line		
 	}
-
+	
+	/**
+	 * simply displays the menu
+	 */
 	private static void showMenu()
 	{
 		System.out.println("Welcome to the planner!");
