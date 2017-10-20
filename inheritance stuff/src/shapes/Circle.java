@@ -6,7 +6,7 @@ public class Circle extends Shape
 	
 	public Circle(double radius)
 	{
-		super("Circle");
+		super(Type.CIRCLE);
 		
 		this.radius = radius;
 	}

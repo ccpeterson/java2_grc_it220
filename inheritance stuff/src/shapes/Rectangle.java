@@ -7,7 +7,7 @@ public class Rectangle extends Shape
 	
 	public Rectangle(double length, double width)
 	{
-		super("rectangle");
+		super(Type.RECTANGLE);
 		
 		this.length = length;
 		this.width = width;

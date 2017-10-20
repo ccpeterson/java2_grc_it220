@@ -3,14 +3,14 @@ package shapes;
 public abstract class Shape 
 {
 	//store "triangle", "square", "rhombus", ...
-	private String name;
+	private Type name;
 	
-	public Shape(String name)
+	public Shape(Type name)
 	{
 		this.name = name;
 	}
 	
-	public String getName()
+	public Type getName()
 	{
 		return name;
 	}
