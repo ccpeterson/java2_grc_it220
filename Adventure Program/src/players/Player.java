@@ -1,14 +1,19 @@
 package players;
 
 public abstract class Player
-{
-	/*
-	 * Player objects will need to manage:
-	 * name: the players name
-	 * fatigue: the players current and maximum fatigue (a player loses when current == maximum)
-	 * steps: the maximum number of steps a player can take (based on sub class)
-	 */
+{	
+	public String name;
+	public int currentFatigue;
+	public int maxFatigue;
+	public int steps;
 	
+	public Player(String newName, int newFatigue, int newSteps)
+	{
+		name = newName;
+		currentFatigue = newFatigue;
+		maxFatigue = newFatigue;
+		steps = newSteps;
+	}
 	public abstract void stepsInMud();
 	public abstract void stepsOnGrass();
 	public abstract void stepsOnRoad();
