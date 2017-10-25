@@ -32,5 +32,5 @@ public class Knight extends Player
 	public void stepsOnTrap()
 	{
 		System.out.println("Lucky my armor is on, ouch!");
-	}
+	}	
 }
