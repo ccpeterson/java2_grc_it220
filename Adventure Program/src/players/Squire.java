@@ -1,5 +1,9 @@
 package players;
-
+/**
+ * Project: Adventure Program 
+ * 10/24/17
+ * @author Clinton Peterson
+ */
 public class Squire extends Player {
 	
 	private final static int MAX_FATIGUE = 15;
@@ -32,5 +36,10 @@ public class Squire extends Player {
 	public void stepsOnTrap()
 	{
 		System.out.println("Ugh a trap!");
+	}
+	
+	public String toString()
+	{
+		return super.toString();
 	}
 }

@@ -1,0 +1,8 @@
+Favorite movie: Star Wars
+Favorite number
+42
+true
+Favorite movie: Star Wars
+Favorite number
+42
+true

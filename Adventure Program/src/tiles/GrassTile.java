@@ -1,7 +1,11 @@
 package tiles;
-
+/**
+ * Project: Adventure Program 
+ * 10/24/17
+ * @author Clinton Peterson
+ */
 import game.Game;
-import players.Player;
+import players.*;
 
 public class GrassTile extends BasicTile
 {

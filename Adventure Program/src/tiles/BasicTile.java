@@ -1,5 +1,9 @@
 package tiles;
-
+/**
+ * Project: Adventure Program 
+ * 10/24/17
+ * @author Clinton Peterson
+ */
 import game.Game;
 
 public abstract class BasicTile

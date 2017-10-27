@@ -1,7 +1,11 @@
 package tiles;
-
+/**
+ * Project: Adventure Program 
+ * 10/24/17
+ * @author Clinton Peterson
+ */
 import game.Game;
-import players.Player;
+import players.*;
 
 public class TrapTile extends BasicTile
 {
@@ -26,7 +30,7 @@ public class TrapTile extends BasicTile
 		Player temp = game.getPlayer();
 		int current = temp.getCurrentFatigue();
 		int max = temp.getMaxFatigue();
-		if (max != 12)
+		if (!(temp instanceof Princess))
 		{
 			current += 2;
 			temp.setCurrentFatigue(current);

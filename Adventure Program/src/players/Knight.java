@@ -1,5 +1,9 @@
 package players;
-
+/**
+ * Project: Adventure Program 
+ * 10/24/17
+ * @author Clinton Peterson
+ */
 public class Knight extends Player
 {
 	private final static int MAX_FATIGUE = 25;
