@@ -1,12 +1,13 @@
 package game;
 
-import players.Player;
-import tiles.BasicTile;
+import players.*;
+import tiles.*;
 
 public class Game
 {
 	//stores tile objects
 	private BasicTile[] tiles;
+	private static int numTiles;
 	
 	/* 
 	 * stores the index of player (which tile the player is located within inside 
@@ -19,6 +20,8 @@ public class Game
 	
 	public Game(int numTiles, Player player)
 	{
+		this.player = player;
+		Game.numTiles = numTiles;
 		
 	}
 	
@@ -27,7 +30,9 @@ public class Game
 	public void startGame()
 	{
 		//this creates our array of tile objects
+		
 		buildTiles();
+		printTiles();
 		
 		/*
 		 * The main game loop should be declared here. Each turn
@@ -60,7 +65,12 @@ public class Game
 	
 	//private methods
 	private void buildTiles()
-	{
+	{	
+		for (int i = 0; i < numTiles; i++ )
+		{
+			tiles[i] = new MudTile();
+		}
+		
 		/*
 		 * This method should instantiate tile objects to fill the
 		 * tiles[] array above. 10% of the tiles should be trap tiles,

@@ -14,7 +14,7 @@ public class MudTile extends BasicTile
 	 * 
 	 * @param type One of the types of tiles (ignored but needed since the parent constructor requires it)
 	 */
-	public MudTile(TileType type)
+	public MudTile()
 	{
 		super(TileType.MUD);
 	}
