@@ -1,10 +1,10 @@
 package tiles;
 /**
  * Project: Adventure Program 
- * 10/24/17
+ * 11/01/17
  * @author Clinton Peterson
  */
-import game.Game;
+import game.*;
 import players.*;
 
 public class MudTile extends BasicTile
@@ -12,7 +12,6 @@ public class MudTile extends BasicTile
 	/**
 	 * Constructs a MudTile object
 	 * 
-	 * @param type One of the types of tiles (ignored but needed since the parent constructor requires it)
 	 */
 	public MudTile()
 	{
@@ -32,7 +31,9 @@ public class MudTile extends BasicTile
 		int max = temp.getMaxFatigue();
 		current += 2;
 		temp.setCurrentFatigue(current);
-		System.out.println("Your fatigue is now " + current + "/" + max);
+		System.out.println(" ");
+		System.out.println("::You arrive at a mud tile::");
 		game.getPlayer().stepsInMud();
+		System.out.println("::Your fatigue is now " + current + "/" + max + "::");		
 	}
 }

@@ -1,20 +1,19 @@
 package tiles;
 /**
  * Project: Adventure Program 
- * 10/24/17
+ * 11/01/17
  * @author Clinton Peterson
  */
-import game.Game;
+import game.*;
 import players.*;
 
 public class TrapTile extends BasicTile
 {
 	/**
 	 * Constructs a TrapTile object
-	 * 
-	 * @param type One of the types of tiles (ignored but needed since the parent constructor requires it)
+	 *
 	 */
-	public TrapTile(TileType type) 
+	public TrapTile() 
 	{
 		super(TileType.TRAP);
 	}
@@ -35,8 +34,10 @@ public class TrapTile extends BasicTile
 			current += 2;
 			temp.setCurrentFatigue(current);
 			game.movePlayer(-1);
-		}		
-		System.out.println("Your fatigue is now " + current + "/" + max);
+		}
+		System.out.println(" ");
+		System.out.println("::You arrive at a trap tile::");
 		game.getPlayer().stepsOnTrap();
+		System.out.println("::Your fatigue is now " + current + "/" + max + "::");		
 	}
 }

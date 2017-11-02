@@ -1,16 +1,22 @@
 package players;
 /**
  * Project: Adventure Program 
- * 10/24/17
+ * 11/01/17
  * @author Clinton Peterson
  */
 public abstract class Player
-{	
+{	//fields
 	private String name;
 	private int currentFatigue;
 	private int maxFatigue;
 	private int steps;
 	
+	/**
+	 * 
+	 * @param newName the name of the player
+	 * @param newFatigue the max fatigue of the player
+	 * @param newSteps the max ammount of steps a player can take per turn
+	 */
 	public Player(String newName, int newFatigue, int newSteps)
 	{
 		name = newName;
@@ -71,6 +77,5 @@ public abstract class Player
 	public String toString()
 	{
 		return("This is a player named " + name);
-	}
-	
+	}	
 }

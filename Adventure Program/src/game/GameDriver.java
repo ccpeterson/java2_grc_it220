@@ -1,13 +1,18 @@
 package game;
-
+/**
+ * Project: Adventure Program 
+ * 11/01/17
+ * @author Clinton Peterson
+ */
 import java.util.Scanner;
-
 import players.*;
 
 public class GameDriver
 {
+	//scanner for user input
 	private static Scanner console = new Scanner(System.in);
 	
+	//main method
 	public static void main(String[] args)
 	{
 		System.out.println("Welcome to an Adventure (of variable length)!");
@@ -15,7 +20,7 @@ public class GameDriver
 		System.out.println("What is your name, noble adventurer?");
 		String playerName = console.nextLine();
 		
-		boolean done = false;
+		boolean done = false; //loops until it gets a good response for player type
 		int playerType = 0;
 		while (!done)
 		{
@@ -32,7 +37,8 @@ public class GameDriver
 				System.out.println("Please enter a valid response");				
 			}
 		}
-		boolean done2 = false;
+		
+		boolean done2 = false; //loops until it gets a good value for game length
 		int gameLength = 0;
 		while (!done2)
 		{
@@ -48,7 +54,8 @@ public class GameDriver
 			}
 		}
 		
-		if (playerType ==1)
+		//starts a new game with the player type chosen
+		if (playerType == 1)
 		{
 			Knight newPlayer = new Knight(playerName);
 			Game game = new Game(gameLength, newPlayer);
@@ -65,10 +72,7 @@ public class GameDriver
 			Squire newPlayer = new Squire(playerName);
 			Game game = new Game(gameLength, newPlayer);
 			game.startGame();
-		}
-				
-		
-		
+		}		
 		console.close();
 	}
 }

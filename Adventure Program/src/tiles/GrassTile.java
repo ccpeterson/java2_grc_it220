@@ -1,10 +1,10 @@
 package tiles;
 /**
  * Project: Adventure Program 
- * 10/24/17
+ * 11/01/17
  * @author Clinton Peterson
  */
-import game.Game;
+import game.*;
 import players.*;
 
 public class GrassTile extends BasicTile
@@ -12,9 +12,8 @@ public class GrassTile extends BasicTile
 	/**
 	 * Constructs a GrassTile object
 	 * 
-	 * @param type One of the types of tiles (ignored but needed since the parent constructor requires it)
 	 */
-	public GrassTile(TileType type)
+	public GrassTile()
 	{
 		super(TileType.GRASS);
 	}
@@ -32,7 +31,9 @@ public class GrassTile extends BasicTile
 		int max = temp.getMaxFatigue();
 		current += 1;
 		temp.setCurrentFatigue(current);
-		System.out.println("Your fatigue is now " + current + "/" + max);
+		System.out.println(" ");
+		System.out.println("::You arrive at a grass tile::");
 		game.getPlayer().stepsOnGrass();
+		System.out.println("::Your fatigue is now " + current + "/" + max + "::");		
 	}
 }

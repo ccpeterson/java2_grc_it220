@@ -1,10 +1,10 @@
 package tiles;
 /**
  * Project: Adventure Program 
- * 10/24/17
+ * 11/01/17
  * @author Clinton Peterson
  */
-import game.Game;
+import game.*;
 import players.*;
 
 public class RoadTile extends BasicTile
@@ -12,9 +12,8 @@ public class RoadTile extends BasicTile
 	/**
 	 * Constructs a RoadTile object
 	 * 
-	 * @param type One of the types of tiles (ignored but needed since the parent constructor requires it)
 	 */
-	public RoadTile(TileType type)
+	public RoadTile()
 	{
 		super(TileType.ROAD);
 	}
@@ -35,8 +34,9 @@ public class RoadTile extends BasicTile
 			current += 1;
 			temp.setCurrentFatigue(current);
 		}
-		
-		System.out.println("Your fatigue is now " + current + "/" + max);
-		game.getPlayer().stepsOnRoad();				
+		System.out.println(" ");
+		System.out.println("::You arrive at a road tile::");
+		game.getPlayer().stepsOnRoad();	
+		System.out.println("::Your fatigue is now " + current + "/" + max + "::");					
 	}
 }
