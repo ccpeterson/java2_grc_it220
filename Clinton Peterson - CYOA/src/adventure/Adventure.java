@@ -110,4 +110,44 @@ public class Adventure
 		//close that console!
 		console.close();
 	}
+	
+	/**
+	 * to string
+	 */
+	@Override
+	public String toString() {
+		return "Adventure [steps=" + Arrays.toString(steps) + ", position=" + position + "]";
+	}
+
+	/**
+	 * 	
+	 * @return
+	 */
+	public String[] getSteps() {
+		return steps;
+	}
+	
+	/**
+	 * 
+	 * @param steps
+	 */
+	public void setSteps(String[] steps) {
+		this.steps = steps;
+	}
+	
+	/**
+	 * 
+	 * @return
+	 */
+	public int getPosition() {
+		return position;
+	}
+	
+	/**
+	 * 
+	 * @param position
+	 */
+	public void setPosition(int position) {
+		this.position = position;
+	}
 }
