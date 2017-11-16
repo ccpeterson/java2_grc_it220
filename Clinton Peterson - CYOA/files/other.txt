@@ -1,0 +1,6 @@
+You are in a room. : Search the room. = 1 | Do a dance. = 2 | Finish the game. = 3
+You find nothing. : Make another choice. = 0
+You shake your booty. : Make another choice. = 0
+Do you want to live or die? : Live. = 4 | Die. = 5
+Ok, you are still alive. : Yay. = -2
+You ded =( : SAD! = -1
