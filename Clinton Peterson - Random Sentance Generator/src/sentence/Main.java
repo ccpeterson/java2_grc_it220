@@ -26,7 +26,7 @@ public class Main
         
         try 
         {
-        	lines = readLines(fileName);
+        	lines = readLines("files/"+fileName);
         }
         catch(Exception e)
         {
