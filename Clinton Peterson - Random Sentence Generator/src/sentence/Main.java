@@ -26,11 +26,12 @@ public class Main
         
         try 
         {
-        	lines = readLines("files/"+fileName);
+        	lines = readLines(fileName);
         }
         catch(Exception e)
         {
         	System.out.println("Sorry that's not a valid file name");
+        	console.close();
         	return;
         }
         // construct grammar solver and begin user input loop
@@ -125,6 +126,7 @@ public class Main
                 lines.add(line);
             }
         }
+        input.close();
         return lines;
     }
 }
